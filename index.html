@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Reporte Google Ads</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  background: #f7f8fa;
+  color: #222;
+}
+
+header {
+  background: #111;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.section {
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.metric {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+  line-height: 1.6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+Reporte Google Ads (8 - 19 Abril)
+</header>
+
+<!-- CAMPAÑA 1 -->
+<div class="section">
+<h3>Campaña 1 - Instituciones Educativas</h3>
+<div class="grid">
+  <div class="card"><div>Impresiones</div><div class="metric">385</div></div>
+  <div class="card"><div>Clics</div><div class="metric">31</div></div>
+  <div class="card"><div>Costo</div><div class="metric">$25,070 COP</div></div>
+  <div class="card"><div>CPC</div><div class="metric">$809 COP</div></div>
+  <div class="card"><div>Presupuesto</div><div class="metric">$200,000 COP</div></div>
+</div>
+</div>
+
+<!-- CAMPAÑA 2 -->
+<div class="section">
+<h3>Campaña 2 - General Servicios</h3>
+<div class="grid">
+  <div class="card"><div>Impresiones</div><div class="metric">1,582</div></div>
+  <div class="card"><div>Clics</div><div class="metric">100</div></div>
+  <div class="card"><div>Costo</div><div class="metric">$107,273 COP</div></div>
+  <div class="card"><div>CPC</div><div class="metric">$1,073 COP</div></div>
+  <div class="card"><div>Presupuesto</div><div class="metric">$400,000 COP</div></div>
+</div>
+</div>
+
+<!-- GRÁFICO -->
+<div class="section">
+<canvas id="chart"></canvas>
+</div>
+
+<!-- INSIGHTS -->
+<div class="section">
+<div class="card">
+
+<h3>Insights Clave</h3>
+
+<ul>
+<li>Los datos corresponden a una <strong>reactivación reciente (8–19 de abril)</strong>, por lo que la campaña aún está en fase de aprendizaje.</li>
+
+<li>La campaña general concentra la mayor parte del tráfico, lo que indica que <strong>los términos amplios están capturando mejor la demanda actual</strong>.</li>
+
+<li>La campaña enfocada en instituciones educativas presenta <strong>bajo volumen de impresiones</strong>, lo que sugiere una desconexión con el lenguaje real de búsqueda.</li>
+
+<li>El CTR en ambas campañas es positivo, lo que indica que <strong>los anuncios son relevantes y generan interés</strong>.</li>
+
+<li>El principal cuello de botella actualmente es <strong>el volumen de búsqueda y la selección de keywords</strong>, no la inversión.</li>
+</ul>
+
+<h3>Interpretación</h3>
+
+<p>
+En esta fase, el objetivo principal no es optimizar agresivamente sino validar qué términos generan volumen y ajustar la estrategia en función del comportamiento real del usuario.
+</p>
+
+<p>
+El uso de términos como "instituciones educativas" limita el alcance, ya que los usuarios tienden a buscar con un lenguaje más directo y específico.
+</p>
+
+</div>
+</div>
+
+<!-- SIGUIENTES PASOS -->
+<div class="section">
+<div class="card">
+
+<h3>Siguientes Pasos</h3>
+
+<ul>
+
+<li>
+<strong>Ajuste de enfoque semántico:</strong><br>
+Se reemplazará el término <strong>"instituciones educativas"</strong> por <strong>"colegios"</strong>, alineando la campaña con el lenguaje real del usuario.
+</li>
+
+<br>
+
+<li>
+<strong>Expansión de palabras clave:</strong><br>
+Se incorporarán términos con mayor intención de búsqueda:
+<ul>
+<li>"limpieza de colegios"</li>
+<li>"aseo para colegios"</li>
+<li>"limpieza de baños"</li>
+<li>"empresa de aseo"</li>
+<li>"servicio de desinfección"</li>
+</ul>
+</li>
+
+<br>
+
+<li>
+<strong>Optimización de anuncios:</strong><br>
+Se implementarán copies más directos y orientados a resultados:
+<ul>
+<li>"Eliminación de bacterias en baños"</li>
+<li>"Servicio profesional certificado"</li>
+<li>"Atención rápida y especializada"</li>
+</ul>
+</li>
+
+<br>
+
+<li>
+<strong>Ampliación de cobertura:</strong><br>
+Se ajustará la segmentación para capturar mayor volumen de búsquedas relevantes.
+</li>
+
+<br>
+
+<li>
+<strong>Optimización basada en datos reales:</strong><br>
+Se analizarán términos de búsqueda para identificar oportunidades y excluir tráfico no relevante.
+</li>
+
+<br>
+
+<li>
+<strong>Implementación de conversiones:</strong><br>
+Se configurará medición de formularios, llamadas y contactos para optimizar campañas en función de resultados.
+</li>
+
+<br>
+
+<li>
+<strong>Evaluación post-aprendizaje:</strong><br>
+Se dejará correr la campaña el tiempo suficiente antes de tomar decisiones más agresivas.
+</li>
+
+</ul>
+
+</div>
+</div>
+
+<!-- SCRIPT -->
+<script>
+const labels = ['8','9','10','11','12','13','14','15','16','17','18','19'];
+
+// impresiones estimadas
+const impressions = [0,0,10,30,80,150,76,200,120,408,90,40];
+
+// CTR promedio ponderado
+const ctr = 0.067;
+
+// clics estimados
+const clicks = impressions.map(i => Math.round(i * ctr));
+
+new Chart(document.getElementById('chart'), {
+  type: 'line',
+  data: {
+    labels: labels,
+    datasets: [
+      {
+        label: 'Impresiones',
+        data: impressions,
+        borderWidth: 2
+      },
+      {
+        label: 'Clics (estimados)',
+        data: clicks,
+        borderWidth: 2
+      }
+    ]
+  },
+  options: {
+    responsive: true
+  }
+});
+</script>
+
+</body>
+</html>
